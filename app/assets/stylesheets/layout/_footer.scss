@@ -1,1 +1,88 @@
 // Your footer style
+.footer {
+  background: #1B2733;
+  // background-image: linear-gradient(to bottom, transparent 0%, #1B2733 30%);
+  height: 250px;
+  width: 100vw;
+  padding: 20px 35px;
+  @include flex;
+  @include flex-items-middle;
+  color: white;
+  opacity: 0.9;
+  > * {
+    @include flex;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    opacity: 0.9;
+    &:hover {
+      color: white;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  i {
+    font-size: 30px;
+    margin: 10px 28px;
+  }
+  &-left {
+    @include flex-items-left;
+  }
+  &-middle {
+    @include flex-items-space-around;
+    @include flex-item-grow(1);
+    .footer-list {
+      &-title {
+        font-size: 20px;
+      }
+      &-item {
+        opacity: 0.8;
+        margin: 10px 0;
+        transition: all 0.3s ease;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      &:last-child {
+        margin-left: 15px;
+      }
+    }
+  }
+  &-right {
+    align-items: stretch;
+    &-stretch {
+      @include flex;
+      @include flex-items-column;
+      @include flex-items-space-between;
+      img {
+        width: 135px;
+      }
+    }
+  }
+}
+
+
+/* OVERRIDE FORM + BUTTON SUBSCRIBE */
+.footer-subscribe {
+  .button.secondary.outline {
+    background: none;
+    color: white;
+    border-color: white;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    &:hover {
+      color: white;
+      border-color: white;
+      opacity: 1;
+    }
+  }
+  .subscribe-mail {
+    background: transparent;
+    &:focus {
+      border-color: white;
+    }
+  }
+}

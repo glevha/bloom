@@ -1,0 +1,39 @@
+.card-mixtape {
+  @include flex;
+  @include flex-items-column;
+  @include flex-items-middle;
+  padding: 15px;
+  background: white;
+  margin-bottom: 15px;
+  &-image {
+    position: relative;
+  }
+  .mixtape-name {
+    margin-top: 5px;
+    h4 {
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.card-eshop-carousel {
+  @include flex;
+  @include flex-items-column;
+  @include flex-items-middle;
+  padding: 15px;
+  background: white;
+  margin-bottom: 15px;
+  width: 100px;
+  &-image {
+    width: 80%;
+  }
+  .product-name {
+    margin-top: 5px;
+    text-transform: uppercase;
+    h4 {
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+}

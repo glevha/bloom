@@ -1,15 +1,19 @@
+// Reset
+@import "vendor/reset";
+
 // Graphical variables
 @import "config/variables";
-@import "config/bootstrap_variables";
+@import "config/kube_variables";
+@import "mixins/index";
 
 // External libraries
-@import "bootstrap-sprockets";
-@import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "vendor/index";
+@import "slick";
+@import "slick-theme";
 
 // Your CSS
-@import "layout/index";
+@import "vendor/index";
 @import "components/index";
+@import "layout/index";
 @import "pages/index";

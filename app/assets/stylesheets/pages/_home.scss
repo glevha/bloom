@@ -2,3 +2,29 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.wrapper {
+  width: 100vw;
+  min-height: 250px;
+  padding: 25px 0;
+  &.eshop {
+    background: $color-silver;
+  }
+  &.records {
+    background: $color-wrapper-blue;
+  }
+  &.youtube {
+
+  }
+  &.social-networks {
+    background: $color-wrapper-blue;
+  }
+  .big-title {
+    text-align: center;
+  }
+}
+
+/* carousel slick */
+.slick-prev:before, .slick-next:before {
+  color: $color-midgray;
+  font-size: 30px;
+}

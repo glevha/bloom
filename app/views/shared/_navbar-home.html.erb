@@ -1,0 +1,84 @@
+<nav class="navbar-home">
+
+  <div class="navbar-left">
+    <%= image_tag asset_path("logo_white.png") %>
+  </div>
+
+  <div class="navbar-middle">
+
+    <!-- Search -->
+    <div class="navbar-item" id="search-wrapper">
+      <i class='material-icons md-18'>search</i>
+    </div>
+
+  </div>
+
+  <div class="navbar-right">
+
+    <% if user_signed_in? %>
+
+      <!-- Profile picture and dropdown -->
+      <div class="navbar-item">
+        <div id="navbar-dropdown">
+          <!-- Dropdown toggle -->
+          <%= link_to "#", id: "user-avatar", "data-component" => "dropdown", "data-target" => "#dropdown" do %>
+            <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+            <%= image_tag avatar_url, class: "avatar-large" %>
+          <% end %>
+
+          <!-- Notifications -->
+          <%#= link_to "#", class: "badge-container" do %>
+            <!--<span class="badge badge-blue">3</span>-->
+          <%# end %>
+
+        <div class="dropdown hide" id="dropdown">
+            <a href="" class="close show-sm"></a>
+            <ul>
+              <li>
+                <%= link_to "" do %>
+                  <i class='material-icons md-18'>account_circle</i> My profile
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "" do %>
+                  <i class='material-icons md-18'>turned_in</i> My bookmarks
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "" do %>
+                  <i class='material-icons md-18'>settings</i> Settings
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class='material-icons md-18'>exit_to_app</i> <%= t(".sign_out", default: "Log out") %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    <% else %>
+      <!-- Login text link -->
+      <%= link_to t(".sign_in", default: "Login"), "#", "data-component" => "modal", "data-target" => "#login-modal", class: "navbar-item upper" %>
+    <% end %>
+
+    <!-- Navigation links -->
+    <%= link_to t(".top_call_to_action", default: "Shop"), "#", class: "navbar-item upper hide-sm" %>
+    <%= link_to t(".top_call_to_action", default: "Label"), "#", class: "navbar-item upper hide-sm" %>
+    <%= link_to t(".top_call_to_action", default: "Mixtapes"), mixtapes_path, class: "navbar-item upper hide-sm" %>
+
+  </div>
+
+</nav>
+<div id="login-modal" class="modal-box hide">
+    <div class="modal">
+        <span class="close"></span>
+        <div class="modal-header"><%= t(".sign_in", default: "Login") %></div>
+        <div class="modal-body">
+          <%= render 'devise/sessions/login-form' %>
+        </div>
+    </div>
+</div>

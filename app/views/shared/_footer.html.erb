@@ -1,0 +1,106 @@
+<footer class="footer">
+
+  <div class="footer-left">
+    <div class="container-networks">
+      <div class="row">
+        <div class="col col-3">
+          <%= link_to "https://www.youtube.com/user/GetTheSound2", target: :_blank do %>
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+          <% end %>
+        </div>
+        <div class="col col-3">
+          <%= link_to "https://www.facebook.com/GetTheSound", target: :_blank do %>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          <% end %>
+        </div>
+        <div class="col col-3">
+          <%= link_to "https://open.spotify.com/user/125882460/playlist/6GVH2qReMQOmcBKT2tuTao?play=true&utm_source=open.spotify.com&utm_medium=open&play=true", target: :_blank do %>
+            <i class="fa fa-spotify" aria-hidden="true"></i>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-3 offset-3">
+          <%= link_to "https://www.instagram.com/getthesound/", target: :_blank do %>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          <% end %>
+        </div>
+        <div class="col col-3">
+          <%= link_to "https://twitter.com/_GetTheSound", target: :_blank do %>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          <% end %>
+        </div>
+        <div class="col col-3">
+          <%= link_to "https://soundcloud.com/getthesound2", target: :_blank do %>
+            <i class="fa fa-soundcloud" aria-hidden="true"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-middle">
+    <div class="footer-list">
+      <ul>
+        <li class=footer-list-title>
+          About
+        </li>
+        <li class="footer-list-item">
+          <%= link_to "#" do %>
+            Events
+          <% end %>
+        </li>
+        <li class="footer-list-item">
+          <%= link_to "#" do %>
+            Our project
+          <% end %>
+        </li>
+        <li class="footer-list-item">
+          <%= link_to "#" do %>
+            Genese
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-list">
+      <ul>
+        <li class=footer-list-title>
+          Contact us
+        </li>
+        <li class="footer-list-item">
+          <%= link_to "#" do %>
+            Label
+          <% end %>
+        </li>
+        <li class="footer-list-item">
+          <%= link_to "#" do %>
+            Broadcast channel
+          <% end %>
+        </li>
+        <li class="footer-list-item">
+          <%= link_to "#" do %>
+            Other enquiries
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <div class="footer-right-stretch">
+      <div class="footer-image">
+        <%= image_tag asset_path("logo_white.png") %>
+      </div>
+      <div class="footer-subscribe">
+        <p>SUBSCRIBE TO OUR MAILING LIST</p>
+        <form class="form form-inline">
+          <div class="form-item">
+            <input type="email" name="email" placeholder="your email" class="small w50 subscribe-mail">
+            <input type="submit" name="subscribe" value="Subscribe" class="small w50 button secondary outline">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</footer>
